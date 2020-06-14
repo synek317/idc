@@ -1,0 +1,29 @@
+[package]
+name = "idc"
+version = "0.1.0"
+authors = ["Marcin Sas-Szymanski <marcin.sas-szymanski@anixe.pl>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+thiserror = "*"
+log = { version = "*", optional = true }
+glob = { version = "*", optional = true }
+serde = { version = "*", optional = true }
+serde-xml-rs = { version = "*", optional = true }
+serde_path_to_error = { version = "*", optional = true }
+serde_json = { version = "*", optional = true }
+
+[features]
+xml = [ "serde", "serde-xml-rs", "serde_path_to_error" ]
+json = [ "serde", "serde_json", "serde_path_to_error" ]
+
+
+[dev-dependencies]
+log = { version = "*" }
+glob = { version = "*" }
+serde = { version = "*" }
+serde-xml-rs = { version = "*" }
+serde_path_to_error = { version = "*" }
+serde_json = { version = "*" }
