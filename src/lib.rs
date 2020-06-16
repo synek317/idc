@@ -6,6 +6,7 @@ pub mod log;
 mod result;
 #[cfg(any(feature = "xml", test))]
 pub mod xml;
+pub mod parse;
 
 pub use self::error::ErrorExt;
 pub use self::result::ResultExt;
